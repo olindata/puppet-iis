@@ -73,7 +73,6 @@ class Puppet::Provider::IISObject < Puppet::Provider
       hash[:name] = item_xml.attributes["#{iis_type.upcase}.NAME"]
       hash[:provider] = self.name
       hash[:ensure] = :present
-      hash[:iis_app] = item_xml.attributes["APP.NAME"] if iis_type == "vdir"
       items << hash
     end
 

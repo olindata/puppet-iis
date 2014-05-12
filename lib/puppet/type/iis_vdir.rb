@@ -11,7 +11,7 @@ Puppet::Type.newtype(:iis_vdir) do
     newvalues(/.+\/.*/)
   end
 
-  newproperty(:iis_app) do
+  newparam(:iis_app) do
     desc "Path of the app the virtual directory is under"
 
     isrequired
